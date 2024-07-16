@@ -1,3 +1,7 @@
+body {
+  @apply w-screen h-screen;
+}
+
 .drag {
   -webkit-app-region: drag;
 }

@@ -36,10 +36,12 @@ export default () => {
   )
   function selectItem(id: number) {
     const content = data.find((item) => item.id === id)?.content
-    if (content) navigator.clipboard.writeText(content)
-    setData([])
-    setSearch('')
-    window.api.hideWindow()
+    if (content)
+      navigator.clipboard.writeText(content).then(() => {
+        setData([])
+        setSearch('')
+        window.api.hideWindow()
+      })
   }
   useEffect(() => {
     document.addEventListener('keydown', handleKeyEvent)

@@ -1,5 +1,5 @@
 .result {
-  @apply bg-stone-50/75 px-3 rounded-b-lg -mt-2 pt-2;
+  @apply bg-stone-50/75 -mt-2 pt-2;
 
   div {
     @apply text-stone-500 truncate mb-2 px-2 py-1 rounded-lg;
