@@ -9,8 +9,8 @@ export default () => {
     setSearch(e.target.value)
     setData(
       codes.filter((code) =>
-        code.content.toLowerCase().includes(e.target.value.toLowerCase() || '´')
-      )
+        code.content.toLowerCase().includes(e.target.value.toLowerCase() || '´'),
+      ),
     )
   }
   return { search, handleSearch }

@@ -11,7 +11,7 @@ const api = {
   },
   ignoreMouseEvents: (ignore: boolean, options?: { forward: boolean }) => {
     ipcRenderer.send('ignoreMouseEvents', ignore, options)
-  }
+  },
 }
 
 // Use `contextBridge` APIs to expose Electron APIs to

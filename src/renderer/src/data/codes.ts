@@ -6,50 +6,50 @@ export interface DataType {
 export const data: DataType[] = [
   {
     id: 1,
-    content: 'Hello, world!'
+    content: 'Hello, world!',
   },
   {
     id: 2,
-    content: 'Hello, Electron!'
+    content: 'Hello, Electron!',
   },
   {
     id: 3,
-    content: 'Hello, Vite!'
+    content: 'Hello, Vite!',
   },
   {
     id: 4,
-    content: 'Hello, React!'
+    content: 'Hello, React!',
   },
   {
     id: 5,
-    content: 'Hello, TypeScript!'
+    content: 'Hello, TypeScript!',
   },
   {
     id: 6,
-    content: 'Hello, TailwindCSS!'
+    content: 'Hello, TailwindCSS!',
   },
   {
     id: 7,
-    content: 'Hello, ESLint!'
+    content: 'Hello, ESLint!',
   },
   {
     id: 8,
-    content: 'Hello, Prettier!'
+    content: 'Hello, Prettier!',
   },
   {
     id: 9,
-    content: 'Hello, Jest!'
+    content: 'Hello, Jest!',
   },
   {
     id: 10,
-    content: 'Hello, GitHub!'
+    content: 'Hello, GitHub!',
   },
   {
     id: 11,
-    content: 'Hello, Vercel!'
+    content: 'Hello, Vercel!',
   },
   {
     id: 12,
-    content: 'Hello, Yarn!'
-  }
+    content: 'Hello, Yarn!',
+  },
 ] as DataType[]

@@ -3,6 +3,7 @@
 
   div {
     @apply text-stone-500 truncate mb-2 px-2 py-1 rounded-lg;
+
     &.active {
       @apply bg-stone-500 text-white;
     }
