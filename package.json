@@ -8,6 +8,7 @@
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "style": "stylelint \"src/**/*.(css)\" --fix",
     "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
     "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
     "typecheck": "npm run typecheck:node && npm run typecheck:web",
@@ -18,16 +19,23 @@
     "build:unpack": "npm run build && electron-builder --dir",
     "build:win": "npm run build && electron-builder --win",
     "build:mac": "electron-vite build && electron-builder --mac",
-    "build:linux": "electron-vite build && electron-builder --linux"
+    "build:linux": "electron-vite build && electron-builder --linux",
+    "prepare": "husky install",
+    "lint:lint-staged": "lint-staged",
+    "commit": "cz"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.0",
     "@electron-toolkit/utils": "^3.0.0",
     "classnames": "^2.5.1",
     "electron-updater": "^6.1.7",
+    "husky": "^9.1.1",
+    "lint-staged": "^15.2.7",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@electron-toolkit/eslint-config-prettier": "^2.0.0",
     "@electron-toolkit/eslint-config-ts": "^1.0.1",
     "@electron-toolkit/tsconfig": "^1.0.1",
@@ -36,6 +44,8 @@
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "electron": "^28.2.0",
     "electron-builder": "^24.9.1",
     "electron-vite": "^2.0.0",
@@ -45,8 +55,23 @@
     "prettier": "^3.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "stylelint": "^16.7.0",
+    "stylelint-config-recommended": "^14.0.1",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-tailwindcss": "^0.0.7",
+    "stylelint-order": "^6.0.4",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.3.3",
     "vite": "^5.0.12"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,cjs,mjs}": "eslint --fix",
+    "*.{css,scss,less,styl}": "stylelint --fix",
+    "*.{ts,tsx,js,jsx,cjs,mjs,css,scss,less,styl,md,html}": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

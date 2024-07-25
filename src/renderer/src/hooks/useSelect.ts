@@ -27,12 +27,13 @@ export default () => {
         }
         case 'Enter': {
           selectItem(id)
+          break
         }
         default:
           break
       }
     },
-    [data, id]
+    [data, id],
   )
   function selectItem(id: number) {
     const content = data.find((item) => item.id === id)?.content

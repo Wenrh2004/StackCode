@@ -6,7 +6,7 @@ import icon from '../../../resources/icon.png?asset'
 
 export function createWindow(): BrowserWindow {
   // Get the screen size of the primary display
-  const { width, height } = screen.getPrimaryDisplay().workAreaSize
+  const { width } = screen.getPrimaryDisplay().workAreaSize
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 600,
@@ -21,8 +21,8 @@ export function createWindow(): BrowserWindow {
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
-      sandbox: false
-    }
+      sandbox: false,
+    },
   })
 
   mainWindow.on('ready-to-show', () => {

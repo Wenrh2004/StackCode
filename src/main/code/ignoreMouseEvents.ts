@@ -7,6 +7,6 @@ export default (mainWindow: BrowserWindow) => {
       //   console.log('ignoreMouseEvents', ignore, options)
 
       mainWindow.setIgnoreMouseEvents(ignore, options)
-    }
+    },
   )
 }
