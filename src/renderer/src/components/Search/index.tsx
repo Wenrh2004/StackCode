@@ -4,16 +4,16 @@ export default function Search(): JSX.Element {
   const { handleSearch, search } = useSearch()
   return (
     <>
-      <main className="bg-stone-50 p-3 rounded-lg shadow-md drag">
-        <section className="bg-slate-200 p-3 rounded-lg">
+      <main className="bg-primary/90 p-2 rounded-t-lg shadow-md drag">
+        <section className="bg-secondary/90 p-2 rounded-lg">
           <input
             value={search}
             onChange={handleSearch}
             autoFocus
-            className="w-full outline-none text-stone-500 text-2xl rounded-lg bg-slate-200"
+            className="w-full outline-none text-mainwhite/90 text-xl rounded-lg bg-background/90 p-2"
           />
         </section>
-        <section className="text-center text-stone-500/50 font-light text-xs mt-2">
+        <section className="text-center text-white/90 font-light text-xs mt-2">
           {'KingYen.'}
         </section>
       </main>
