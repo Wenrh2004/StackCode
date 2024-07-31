@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .theme-dark {
+    --color-primary: 65 65 65;
+    --color-secondary: 80 80 80;
+    --color-background: 100 100 100;
+    --color-foreground: 130 130 130;
+    --color-white: 255 255 255;
+    --color-mainwhite: 200 200 200;
+  }
+}

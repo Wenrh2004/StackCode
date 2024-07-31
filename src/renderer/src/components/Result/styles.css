@@ -1,11 +1,11 @@
 .result {
-  @apply bg-stone-50/75 -mt-2 pt-2;
+  @apply bg-primary/90;
 
   div {
-    @apply text-stone-500 truncate mb-2 px-2 py-1 rounded-lg;
+    @apply text-mainwhite/90 p-2 truncate rounded-lg text-sm;
 
     &.active {
-      @apply bg-stone-500 text-white;
+      @apply bg-foreground/90 text-white;
     }
   }
 }

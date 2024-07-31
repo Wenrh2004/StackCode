@@ -15,7 +15,7 @@ function App(): JSX.Element {
     setIgnoreMouseEvents(mainRef as MutableRefObject<HTMLDivElement>)
   }, [])
   return (
-    <main className="p-3" ref={mainRef}>
+    <main className="theme-dark" ref={mainRef}>
       <section className="z-50 relative">
         <Search />
       </section>

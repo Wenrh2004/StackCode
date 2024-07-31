@@ -19,7 +19,9 @@ export default function Result() {
         ))}
       </main>
       {/* TODO： 实现快捷键提示 */}
-      <section className="bg-stone-400/75 z-10 px-3 rounded-b-lg -mt-2 pt-2">快捷键提示</section>
+      <section className=" bg-secondary/90 text-mainwhite z-10 p-2 text-xs rounded-b-lg">
+        快捷键提示
+      </section>
     </>
   )
 }
