@@ -9,3 +9,13 @@
     }
   }
 }
+
+/* 添加隐藏滚动条的样式 */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE 和 Edge */
+  scrollbar-width: none; /* Firefox */
+}
