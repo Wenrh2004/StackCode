@@ -1,5 +1,6 @@
 import { BrowserWindow, app } from 'electron'
 import './code'
+import './db'
 import { electronApp, optimizer } from '@electron-toolkit/utils'
 import { createWindow } from './code/window'
 
