@@ -1,17 +1,31 @@
 import classNames from 'classnames'
 import useSelect from '@renderer/hooks/useSelect'
 import './styles.css'
+import { useEffect, useRef } from 'react'
 
 export default function Result() {
   const { data, id, selectItem } = useSelect()
+  const activeItemRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLElement>(null)
+
+  // 当id变化时，自动滚动到选中项
+  useEffect(() => {
+    if (activeItemRef.current && containerRef.current) {
+      activeItemRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+      })
+    }
+  }, [id])
+
   return (
     <>
-      <main className="result">
-        {/* TODO: 只展示5个搜索结果，并支持滚动 */}
+      <main ref={containerRef} className="result hide-scrollbar overflow-y-auto max-h-[185px]">
         {data.map((item) => (
           <div
             key={item.id}
-            className={classNames({ active: item.id == id })}
+            ref={item.id === id ? activeItemRef : null}
+            className={classNames('overflow-hidden', { active: item.id == id })}
             onClick={() => selectItem(item.id)}
           >
             {item.content}
