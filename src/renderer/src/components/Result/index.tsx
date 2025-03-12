@@ -20,6 +20,7 @@ export default function Result() {
       </main>
       {/* TODO： 实现快捷键提示 */}
       <section className=" bg-secondary/90 text-mainwhite z-10 p-2 text-xs rounded-b-lg">
+        <button onClick={() => window.api.openConfigWindow()}>settings</button>
         快捷键提示
       </section>
     </>

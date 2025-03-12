@@ -12,6 +12,10 @@ const api = {
   ignoreMouseEvents: (ignore: boolean, options?: { forward: boolean }) => {
     ipcRenderer.send('ignoreMouseEvents', ignore, options)
   },
+  // config window
+  openConfigWindow: () => {
+    ipcRenderer.send('openConfigWindow')
+  },
 }
 
 // Use `contextBridge` APIs to expose Electron APIs to
