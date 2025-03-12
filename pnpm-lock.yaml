@@ -2750,7 +2750,6 @@ packages:
 
   postcss-selector-parser@7.1.0:
     resolution: {integrity: sha512-8sLjZwK0R+JlxlYcTuVnyT2v+htpdrjDOKuMcOVdYjt52Lh8hWRYpxBPoKx/Zg+bcjc3wx6fmQevMmUztS/ccA==}
-
     engines: {node: '>=4'}
 
   postcss-sorting@8.0.2:
@@ -5355,7 +5354,7 @@ snapshots:
   file-entry-cache@10.0.7:
     dependencies:
       flat-cache: 6.1.7
-      
+
   file-entry-cache@6.0.1:
     dependencies:
       flat-cache: 3.2.0
