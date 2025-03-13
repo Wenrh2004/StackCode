@@ -24,7 +24,7 @@ export function createWindow(): BrowserWindow {
       sandbox: false,
     },
   })
-  mainWindow.webContents.openDevTools() //TODO 测试控制台
+  // mainWindow.webContents.openDevTools() //TODO 测试控制台
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
   })

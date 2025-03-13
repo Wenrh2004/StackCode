@@ -27,6 +27,7 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.0",
     "@electron-toolkit/utils": "^3.0.0",
+    "@icon-park/react": "^1.4.2",
     "@types/better-sqlite3": "^7.6.12",
     "better-sqlite3": "^11.8.1",
     "classnames": "^2.5.1",
@@ -62,6 +63,7 @@
     "prettier": "^3.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sass": "^1.85.1",
     "stylelint": "^16.7.0",
     "stylelint-config-recommended": "^14.0.1",
     "stylelint-config-standard": "^36.0.1",
