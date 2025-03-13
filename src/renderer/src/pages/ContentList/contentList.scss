@@ -1,13 +1,13 @@
-.category-page {
-  @apply w-screen h-screen;
+.content-list-page {
+  @apply h-screen text-xs text-slate-700;
 
   display: grid;
-  grid-template:
-    'categories content' auto
-    'nav content' 30px/150px auto;
+  grid-template: 'list content' auto / 250px auto;
 
-  .categories {
-    @apply border-r bg-slate-100 text-xs text-slate-700 overflow-y-auto;
+  .list {
+    @apply bg-slate-50 border-r overflow-y-auto;
+
+    grid-area: list;
 
     /* 自定义滚动条样式 */
     &::-webkit-scrollbar {
@@ -27,22 +27,13 @@
       background: #555; /* 滑块悬停背景色 */
     }
 
-    grid-area: categories;
-
     a {
-      @apply px-2 py-1.5 truncate cursor-pointer block;
+      @apply px-2 py-1.5 truncate cursor-pointer block flex items-center gap-1  border-b mx-0.5;
 
       &.active {
         @apply text-slate-200 bg-blue-600 mx-0.5 rounded-md;
       }
     }
-  }
-
-  .nav {
-    @apply border-t border-r bg-slate-100 flex justify-center items-center
-    gap-5;
-
-    grid-area: nav;
   }
 
   .content {
