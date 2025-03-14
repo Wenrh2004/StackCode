@@ -1,15 +1,16 @@
-export default async ({ request, params }) => {
-  const data = await request.formData()
-  return await window.api.sql(
+import { redirect } from 'react-router-dom'
+
+export default async ({ request }) => {
+  const formData = await request.formData()
+  const data = Object.fromEntries(formData)
+  await window.api.sql(
     `update contents
      set title=@title,
-         content=@content
+         content=@content,
+         category_id=@category_id
      where id = @id`,
     'update',
-    {
-      title: data.get('title'),
-      content: data.get('content'),
-      id: params.id,
-    },
+    data,
   )
+  return redirect(`/config/category/contentList/${data.category_id}/content/${data.id}`)
 }

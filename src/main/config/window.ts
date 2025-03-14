@@ -39,14 +39,14 @@ export function createWindow(): BrowserWindow {
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
   if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
-    mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL'] + '/#config/category')
+    mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL'] + '/#config/category/contentList')
   } else {
     mainWindow.loadURL(
       url.format({
         pathname: join(__dirname, '../renderer/index.html'),
         protocol: 'file:',
         slashes: true,
-        hash: 'config/category',
+        hash: 'config/category/contentList',
       }),
     )
   }

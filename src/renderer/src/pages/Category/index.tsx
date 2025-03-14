@@ -1,26 +1,27 @@
 import './category.scss'
 import { NavLink, Outlet, useLoaderData } from 'react-router-dom'
-import { Add, Config, FolderOpen } from '@icon-park/react'
-// import { useEffect } from 'react'
+import { Add, Config, FolderOpen, AllApplication } from '@icon-park/react'
 
 export const Category = () => {
   const categories = useLoaderData() as CategoryType[]
-  // const navigate = useNavigate()
-  // useEffect(() => {
-  //   if (categories.length) {
-  //     const category = categories[0]
-  //     navigate(`/config/category/contentList/${category.id}`)
-  //   }
-  // }, [categories])
   return (
     <main className="category-page">
       <div className="categories">
+        <div className="px-2 mt-2 opacity-90 mb-1">快捷操作</div>
+        <NavLink to={`/config/category/contentList`} end className="font-bold">
+          <div className="flex item-center gap-1">
+            <AllApplication theme="outline" size="12" />
+            <div className="truncate">所有片段</div>
+          </div>
+        </NavLink>
+        <NavLink to={`/config/category/contentList/0`} end className="font-bold">
+          <div className="flex item-center gap-1">
+            <AllApplication theme="outline" size="12" />
+            <div className="truncate">未分类</div>
+          </div>
+        </NavLink>
         {categories.map((category) => (
-          <NavLink
-            to={`/config/category/contentList/${category.id}`}
-            key={category.id}
-            className={({ isActive }) => (isActive ? 'active' : '')}
-          >
+          <NavLink to={`/config/category/contentList/${category.id}`} key={category.id}>
             <div className="flex item-center gap-1">
               <FolderOpen theme="outline" size="12" />
               <div className="truncate">{category.name}</div>

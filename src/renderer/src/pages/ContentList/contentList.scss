@@ -28,10 +28,10 @@
     }
 
     a {
-      @apply px-2 py-1.5 truncate cursor-pointer block flex items-center gap-1  border-b mx-0.5;
+      @apply px-2 py-1.5 truncate cursor-pointer block flex items-center gap-1  border-b mx-1 my-1;
 
       &.active {
-        @apply text-slate-200 bg-blue-600 mx-0.5 rounded-md;
+        @apply text-slate-200 bg-blue-600  rounded-md;
       }
     }
   }
