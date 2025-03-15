@@ -4,6 +4,7 @@ $height: 33px;
   @apply px-2 py-2 truncate cursor-pointer block mx-0.5 my-0.5 rounded-md;
 
   height: $height;
+  -webkit-user-drag: none;
 }
 
 .link {

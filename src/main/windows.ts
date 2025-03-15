@@ -6,6 +6,7 @@ export const config = {
     id: 0,
     options: {
       hash: '',
+      // openDevTools: true,
     },
   },
   config: {
@@ -16,6 +17,7 @@ export const config = {
       frame: true,
       transparent: false,
       hash: '/#config/category/contentList',
+      // openDevTools: true,
     },
   },
 } as Record<WindowNameType, { id: number; options: OptionsType }>

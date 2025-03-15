@@ -11,5 +11,9 @@
     }
 
     @apply border p-3 rounded-md bg-white my-5;
+
+    input {
+      @apply border w-full outline-none;
+    }
   }
 }

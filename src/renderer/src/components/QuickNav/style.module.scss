@@ -1,5 +1,7 @@
 @mixin commonLink {
   @apply px-2 py-2 truncate cursor-pointer block mx-0.5;
+
+  -webkit-user-drag: none;
 }
 
 .link {

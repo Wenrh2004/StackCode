@@ -1,13 +1,9 @@
 import Search from '@renderer/components/Search'
 import Result from '@renderer/components/Result'
-import useShortCut from '@renderer/hooks/useShortCut'
 import { MutableRefObject, useEffect, useRef } from 'react'
 import useIgnoreMouseEvents from '@renderer/hooks/useIgnoreMouseEvents'
 
 function Home(): JSX.Element {
-  // 快捷键注册
-  const { registerSearch } = useShortCut()
-  registerSearch('Search', 'CommandOrControl+Shift+;')
   // 鼠标穿透
   const mainRef = useRef<HTMLDivElement | null>(null)
   const { setIgnoreMouseEvents } = useIgnoreMouseEvents()
