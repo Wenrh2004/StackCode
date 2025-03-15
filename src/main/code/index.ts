@@ -1,7 +1,7 @@
 import { createWindow } from './window'
 import { registerIPC } from './ipc'
 import { app } from 'electron'
-import { registerShortCut } from './shortCut'
+import { registerShortCut } from '../shortCut'
 import ignoreMouseEvents from './ignoreMouseEvents'
 
 app.whenReady().then(() => {

@@ -1,5 +1,5 @@
 import { Add, Config } from '@icon-park/react'
-import { useSubmit } from 'react-router-dom'
+import { Link, useSubmit } from 'react-router-dom'
 
 export const FooterMenu = () => {
   const submit = useSubmit()
@@ -13,7 +13,9 @@ export const FooterMenu = () => {
           submit(null, { method: 'POST' })
         }}
       />
-      <Config theme="outline" size="20" strokeWidth={2} />
+      <Link to="/config">
+        <Config theme="outline" size="20" strokeWidth={2} />
+      </Link>
     </div>
   )
 }

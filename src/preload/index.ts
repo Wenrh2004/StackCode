@@ -19,6 +19,12 @@ const api = {
   sql: (sql: string, type: SqlActionType, params = {}) => {
     return ipcRenderer.invoke('sql', sql, type, params)
   },
+  openWindow: (name: WindowNameType) => {
+    ipcRenderer.send('openWindow', name)
+  },
+  closeWindow: (name: WindowNameType) => {
+    ipcRenderer.send('closeWindow', name)
+  },
 }
 
 // Use `contextBridge` APIs to expose Electron APIs to
