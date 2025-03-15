@@ -1,0 +1,29 @@
+$height: 33px;
+
+@mixin commonLink {
+  @apply px-2 py-2 truncate cursor-pointer block mx-0.5 my-0.5 rounded-md;
+
+  height: $height;
+}
+
+.link {
+  @include commonLink();
+
+  @apply hover:bg-slate-200;
+}
+
+.active {
+  @include commonLink();
+
+  @apply text-slate-200 bg-blue-600 rounded-md;
+}
+
+.input {
+  @apply w-full px-2;
+
+  height: $height;
+
+  input {
+    @apply w-full h-full rounded-md px-2 border outline-none;
+  }
+}

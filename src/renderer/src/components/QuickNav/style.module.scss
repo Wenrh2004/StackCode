@@ -1,0 +1,13 @@
+@mixin commonLink {
+  @apply px-2 py-2 truncate cursor-pointer block mx-0.5;
+}
+
+.link {
+  @include commonLink();
+}
+
+.active {
+  @include commonLink();
+
+  @apply text-slate-200 bg-[#f39c12] rounded-md;
+}
