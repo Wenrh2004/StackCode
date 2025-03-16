@@ -1,10 +1,11 @@
 import { create } from 'zustand'
-import { DataType } from '@renderer/data/codes'
 import { createJSONStorage, persist } from 'zustand/middleware'
 
 interface StateProps {
-  data: DataType[]
-  setData: (data: DataType[]) => void
+  config: ConfigDataType
+  setConfig: (config: ConfigDataType) => void
+  data: ContentType[]
+  setData: (data: ContentType[]) => void
   search: string
   setSearch: (search: string) => void
   error: string
@@ -18,6 +19,8 @@ interface StateProps {
 export const useStore = create(
   persist<StateProps>(
     (set) => ({
+      config: { databaseDirectory: '', shortCut: '' },
+      setConfig: (config) => set({ config }),
       data: [],
       setData: (data) => set({ data }),
       search: '',
@@ -30,7 +33,7 @@ export const useStore = create(
       setEditCategoryId: (editCategoryId) => set({ editCategoryId }),
     }),
     {
-      name: 'asasasa',
+      name: 'stackCode',
       storage: createJSONStorage(() => localStorage),
     },
   ),

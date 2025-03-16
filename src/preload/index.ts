@@ -9,6 +9,9 @@ const api = {
   shortCut: (type: string, shortCut: string) => {
     return ipcRenderer.invoke('shortCut', type, shortCut)
   },
+  delShortCut: (shortCut: string) => {
+    return ipcRenderer.invoke('delShortCut', shortCut)
+  },
   ignoreMouseEvents: (ignore: boolean, options?: { forward: boolean }) => {
     ipcRenderer.send('ignoreMouseEvents', ignore, options)
   },
@@ -24,6 +27,15 @@ const api = {
   },
   closeWindow: (name: WindowNameType) => {
     ipcRenderer.send('closeWindow', name)
+  },
+  selectDatabaseDirectory: () => {
+    return ipcRenderer.invoke('selectDatabaseDirectory')
+  },
+  setDatabaseDirectory: (path: string) => {
+    ipcRenderer.send('setDatabaseDirectory', path)
+  },
+  initTable: () => {
+    ipcRenderer.send('initTable')
   },
 }
 

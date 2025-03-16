@@ -6,6 +6,19 @@ export const config = {
     id: 0,
     options: {
       hash: '',
+      initShow: true,
+      // openDevTools: true,
+    },
+  },
+  code: {
+    id: 0,
+    options: {
+      width: 900,
+      height: 650,
+      frame: true,
+      transparent: false,
+      // initShow: true,
+      hash: '/#config/category/contentList',
       // openDevTools: true,
     },
   },
@@ -14,10 +27,11 @@ export const config = {
     options: {
       width: 900,
       height: 650,
+      // initShow: true,
       frame: true,
       transparent: false,
-      hash: '/#config/category/contentList',
-      // openDevTools: true,
+      hash: '/#config',
+      openDevTools: true,
     },
   },
 } as Record<WindowNameType, { id: number; options: OptionsType }>

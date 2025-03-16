@@ -8,6 +8,7 @@ import * as url from 'node:url'
 export interface OptionsType extends Partial<BrowserWindowConstructorOptions> {
   openDevTools?: boolean
   hash?: string
+  initShow?: boolean
 }
 
 export function createWindow(options: OptionsType): BrowserWindow {
@@ -35,9 +36,9 @@ export function createWindow(options: OptionsType): BrowserWindow {
       options,
     ),
   )
-  if (is.dev && options.openDevTools) mainWindow.webContents.openDevTools() //TODO 测试控制台
+  if (is.dev && options.openDevTools) mainWindow.webContents.openDevTools()
   mainWindow.on('ready-to-show', () => {
-    mainWindow.show()
+    options.initShow && mainWindow.show()
   })
 
   mainWindow.webContents.setWindowOpenHandler((details) => {

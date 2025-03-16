@@ -28,14 +28,22 @@ export default function Result() {
             className={classNames('overflow-hidden', { active: item.id == id })}
             onClick={() => selectItem(item.id)}
           >
-            {item.content}
+            {item.title}
           </div>
         ))}
       </main>
       {/* TODO： 实现快捷键提示 */}
       <section className=" bg-secondary/90 text-mainwhite z-10 p-2 text-xs rounded-b-lg">
-        <button onClick={() => window.api.openWindow('config')}>settings</button>
+        <button className="select-none" onClick={() => window.api.openWindow('code')}>
+          code
+        </button>
         快捷键提示
+        <span
+          className="text-blue-600 cursor-pointer select-none"
+          onClick={() => window.api.openWindow('config')}
+        >
+          config
+        </span>
       </section>
     </>
   )
