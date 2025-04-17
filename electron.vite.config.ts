@@ -10,6 +10,13 @@ export default defineConfig({
     plugins: [externalizeDepsPlugin()],
   },
   renderer: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          silenceDeprecations: ['legacy-js-api'],
+        },
+      },
+    },
     resolve: {
       alias: {
         '@renderer': resolve('src/renderer/src'),

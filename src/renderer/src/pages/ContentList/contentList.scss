@@ -1,0 +1,34 @@
+.content-list-page {
+  @apply h-screen text-xs text-slate-700;
+
+  display: grid;
+  grid-template: 'list content' auto / 250px auto;
+
+  .list {
+    @apply bg-slate-50 border-r overflow-y-auto;
+
+    grid-area: list;
+
+    /* 自定义滚动条样式 */
+    &::-webkit-scrollbar {
+      width: 5px; /* 调整滚动条宽度 */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1; /* 滚动条轨道背景色 */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #888; /* 滚动条滑块背景色 */
+      border-radius: 5px; /* 滑块圆角 */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555; /* 滑块悬停背景色 */
+    }
+  }
+
+  .content {
+    grid-area: content;
+  }
+}

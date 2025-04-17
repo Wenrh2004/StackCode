@@ -1,0 +1,43 @@
+.category-page {
+  @apply w-screen h-screen;
+
+  display: grid;
+  grid-template:
+    'categories content' auto
+    'nav content' 30px/150px auto;
+
+  .categories {
+    @apply border-r bg-slate-100 text-xs text-slate-700 overflow-y-auto;
+
+    /* 自定义滚动条样式 */
+    &::-webkit-scrollbar {
+      width: 5px; /* 调整滚动条宽度 */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1; /* 滚动条轨道背景色 */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #888; /* 滚动条滑块背景色 */
+      border-radius: 5px; /* 滑块圆角 */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555; /* 滑块悬停背景色 */
+    }
+
+    grid-area: categories;
+  }
+
+  .nav {
+    @apply border-t border-r bg-slate-100 flex justify-center items-center
+    gap-5;
+
+    grid-area: nav;
+  }
+
+  .content {
+    grid-area: content;
+  }
+}

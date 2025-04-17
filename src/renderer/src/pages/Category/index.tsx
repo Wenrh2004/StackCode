@@ -1,0 +1,23 @@
+import './category.scss'
+import { Outlet, useLoaderData } from 'react-router-dom'
+import { QuickNav } from '@renderer/components/QuickNav'
+import { CategoryItem } from '@renderer/components/CategoryItem'
+import { FooterMenu } from '@renderer/components/FooterMenu'
+
+export const Category = () => {
+  const categories = useLoaderData() as CategoryType[]
+  return (
+    <main className="category-page">
+      <div className="categories">
+        <QuickNav />
+        {categories.map((category) => (
+          <CategoryItem category={category} key={category.id} />
+        ))}
+      </div>
+      <FooterMenu />
+      <div className="content">
+        <Outlet />
+      </div>
+    </main>
+  )
+}

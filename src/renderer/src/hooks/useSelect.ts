@@ -9,24 +9,28 @@ export default () => {
   const setSearch = useStore((state) => state.setSearch)
   const handleKeyEvent = useCallback(
     (e: KeyboardEvent) => {
-      console.log(id, data)
-
-      if (data.length === 0) return
       switch (e.code) {
         case 'ArrowUp': {
+          if (data.length === 0) return
           e.preventDefault()
           const index = data.findIndex((item) => item.id === id)
           setId(data[index - 1]?.id || data[data.length - 1].id)
           break
         }
         case 'ArrowDown': {
+          if (data.length === 0) return
           e.preventDefault()
           const index = data.findIndex((item) => item.id === id)
           setId(data[index + 1]?.id || data[0].id)
           break
         }
         case 'Enter': {
+          window.api.closeWindow('search')
           selectItem(id)
+          break
+        }
+        case 'Escape': {
+          window.api.closeWindow('search')
           break
         }
         default:
