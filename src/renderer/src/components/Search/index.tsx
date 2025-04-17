@@ -13,8 +13,8 @@ export default function Search(): JSX.Element {
             className="w-full outline-none text-mainwhite/90 text-xl rounded-lg bg-background/90 p-2"
           />
         </section>
-        <section className="text-center text-white/90 font-light text-xs mt-2">
-          {'KingYen.'}
+        <section className="text-center text-white/90 font-light text-xs mt-1">
+          {'「StackCode」'}
         </section>
       </main>
     </>

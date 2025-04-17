@@ -27,6 +27,8 @@ export function createWindow(options: OptionsType): BrowserWindow {
         transparent: true,
         alwaysOnTop: true,
         autoHideMenuBar: true,
+        // 设置窗口不可改变大小
+        resizable: false,
         ...(process.platform === 'linux' ? { icon } : {}),
         webPreferences: {
           preload: join(__dirname, '../preload/index.js'),
@@ -56,7 +58,7 @@ export function createWindow(options: OptionsType): BrowserWindow {
         pathname: join(__dirname, '../renderer/index.html'),
         protocol: 'file:',
         slashes: true,
-        hash: 'config/category/contentList',
+        hash: options.hash?.substring(1),
       }),
     )
   }
