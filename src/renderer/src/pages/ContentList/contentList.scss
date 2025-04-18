@@ -2,7 +2,7 @@
   @apply h-screen text-xs text-slate-700;
 
   display: grid;
-  grid-template: 'list content' auto / 250px auto;
+  grid-template: 'list content' auto / 240px auto;
 
   .list {
     @apply bg-slate-50 border-r overflow-y-auto;
