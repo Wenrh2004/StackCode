@@ -31,7 +31,7 @@ export const config = {
       frame: true,
       transparent: false,
       hash: '/#config',
-      openDevTools: true,
+      // openDevTools: true,
     },
   },
 } as Record<WindowNameType, { id: number; options: OptionsType }>

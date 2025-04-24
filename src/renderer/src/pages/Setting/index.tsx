@@ -38,7 +38,7 @@ export const Setting = () => {
           />
         </section>
         <section>
-          <h5>数据库</h5>
+          <h5>文件存储位置</h5>
           <input
             type="text"
             name="databaseDirectory"

@@ -12,7 +12,7 @@ export default function Result() {
   useEffect(() => {
     if (activeItemRef.current && containerRef.current) {
       activeItemRef.current.scrollIntoView({
-        behavior: 'smooth',
+        // behavior: 'smooth',
         block: 'nearest',
       })
     }
@@ -20,19 +20,19 @@ export default function Result() {
 
   return (
     <>
-      <main ref={containerRef} className="result hide-scrollbar overflow-y-auto max-h-[185px]">
+      <main ref={containerRef} className="result overflow-y-auto max-h-[185px]">
         {data.map((item) => (
           <div
             key={item.id}
             ref={item.id === id ? activeItemRef : null}
-            className={classNames('overflow-hidden', { active: item.id == id })}
+            // 添加 cursor: pointer 样式
+            className={classNames('overflow-hidden', { active: item.id == id }, 'cursor-pointer')}
             onClick={() => selectItem(item.id)}
           >
             {item.title}
           </div>
         ))}
       </main>
-      {/* TODO： 实现快捷键提示 */}
       <section className=" bg-secondary/90 text-mainwhite z-10 p-2 text-xs rounded-b-lg">
         <button className="select-none" onClick={() => window.api.openWindow('code')}>
           code

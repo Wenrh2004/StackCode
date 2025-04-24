@@ -10,6 +10,30 @@
   }
 }
 
+/* 自定义滚动条样式 */
+.result::-webkit-scrollbar {
+  width: 5px; /* 将滚动条宽度设置为 5px，可按需调整 */
+}
+
+/* 修改滚动条轨道背景颜色为当前窗口颜色 */
+.result::-webkit-scrollbar-track {
+  background: rgb(255 255 255 / 0%); /* 这里假设背景颜色透明，可根据实际修改为窗口颜色 */
+}
+
+/* 修改滚动条滑块颜色 */
+.result::-webkit-scrollbar-thumb {
+  background: #666; /* 加深滚动条滑块颜色 */
+  border-radius: 2.5px; /* 滚动条滑块圆角，保持与宽度的比例 */
+}
+
+/* 移除鼠标悬停时滚动条滑块颜色变化的样式 */
+
+/*
+.result::-webkit-scrollbar-thumb:hover {
+  background: #444; 
+}
+*/
+
 /* 添加隐藏滚动条的样式 */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
