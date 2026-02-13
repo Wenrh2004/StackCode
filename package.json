@@ -39,7 +39,7 @@
     "lint-staged": "^15.2.7",
     "localforage": "^1.10.0",
     "mantine-contextmenu": "^7.17.1",
-    "markdown-it": "^14.1.0",
+    "markdown-it": "^14.1.1",
     "match-sorter": "^8.0.0",
     "mockjs": "^1.1.0",
     "react-markdown": "^10.1.0",
